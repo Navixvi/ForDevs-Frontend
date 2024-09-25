@@ -1,27 +1,25 @@
 'use client';
 
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import Link from 'next/link';
 
 const Navbar = () => {
     return (
-        <NavigationMenu.Root>
-            <NavigationMenu.List className="flex space-x-4 p-4 bg-gray-800 text-white">
-                <NavigationMenu.Item>
+        <nav>
+            <ul className="flex space-x-4 p-4 bg-gray-800 text-white">
+                <li>
                     <Link href="/home" className="hover:underline">Home</Link>
-                </NavigationMenu.Item>
-                <NavigationMenu.Item>
+                </li>
+                <li>
                     <Link href="/profile" className="hover:underline">Profile</Link>
-                </NavigationMenu.Item>
-                <NavigationMenu.Item>
+                </li>
+                <li>
                     <Link href="/admin-view" className="hover:underline">Admin</Link>
-                </NavigationMenu.Item>
-                <NavigationMenu.Item>
+                </li>
+                <li>
                     <Link href="/create-project" className="hover:underline">Create Project</Link>
-                </NavigationMenu.Item>
-                {/* Agrega más enlaces según sea necesario */}
-            </NavigationMenu.List>
-        </NavigationMenu.Root>
+                </li>
+            </ul>
+        </nav>
     );
 };
 
