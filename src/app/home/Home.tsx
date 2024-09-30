@@ -1,11 +1,11 @@
-import { fetchProjects } from "@/src/lib/utils/project-util";
+import { fetchProjects } from "@/lib/project-util";
 
 import {
   Card,
   CardDescription,
   CardTitle,
   CardImage,
-} from "@/src/components/ui/card";
+} from "@/components/ui/card";
 
 const Home = async () => {
   const projects = await fetchProjects();
