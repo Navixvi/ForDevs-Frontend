@@ -1,4 +1,4 @@
-import { fetchProjects } from "@/src/lib/db/project-util";
+import { fetchProjects } from "@/src/lib/utils/project-util";
 
 import {
   Card,
