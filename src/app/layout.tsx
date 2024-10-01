@@ -15,11 +15,11 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="es">
       <body className={inter.className}>
-        <Navbar />
         <ReduxProvider>
+          <Navbar />
           <main>{children}</main>
+          <Footer />
         </ReduxProvider>
-        <Footer />
       </body>
     </html>
   );
