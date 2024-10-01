@@ -14,15 +14,14 @@ const RegisterForm = () => {
   };
 
   const fields = [
-    { name: 'firstName', type: 'text', label: 'Nombre', placeholder: 'Tu nombre' },
-    { name: 'lastName', type: 'text', label: 'Apellido', placeholder: 'Tu apellido' },
-    { name: 'email', type: 'email', label: 'Email', placeholder: 'Tu email' },
-    { name: 'password', type: 'password', label: 'Contraseña', placeholder: 'Tu contraseña' },
+    { name: 'firstName', type: 'text', label: 'Firstname', placeholder: 'John' },
+    { name: 'lastName', type: 'text', label: 'Lastname', placeholder: 'Doe' },
+    { name: 'email', type: 'email', label: 'Email', placeholder: 'johndow@example.com' },
+    { name: 'password', type: 'password', label: 'Password', placeholder: 'Password' },
   ];
 
   const handleSubmit = async (userData: any) => {
     try {
-        console.log(userData, "askdhajshdjkashdjkahsdkjashdkjshdkjhasd");
         await register(userData)
     } catch (error) {
         console.log(error);
