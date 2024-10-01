@@ -1,6 +1,7 @@
 import * as React from "react"
-
 import { cn } from "@/lib/utils"
+
+import Image from "next/image"
 
 const Card = React.forwardRef<
   HTMLDivElement,
@@ -76,4 +77,30 @@ const CardFooter = React.forwardRef<
 ))
 CardFooter.displayName = "CardFooter"
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+const CardImage = ({
+  src,
+  alt,
+  width,
+  height,
+  className,
+  ...props
+}: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  className?: string;
+}) => (
+  <Image
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    className={cn("rounded-t-lg", className)}
+    {...props}
+  />
+)
+
+CardImage.displayName = "CardImage"
+
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent, CardImage }
